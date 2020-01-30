@@ -33,8 +33,8 @@ public class Comprobar {
         reglas.put(6, "MIERCOLES");
         reglas.put(7, "JUEVES");
         reglas.put(8, "JUEVES");
-        reglas.put(1, "VIERNES");
-        reglas.put(1, "VIERNES");
+        reglas.put(9, "VIERNES");
+        reglas.put(0, "VIERNES");
     }
     
     //generar getters an setters
@@ -140,7 +140,7 @@ public class Comprobar {
         this.ultimo_Digito();
         this.ingresar_Reglas();
         this.comprobar_Fecha();
-        
+       
         if(this.dia.equals(this.reglas.get(this.ultimo_digito))){
             if((this.comprobacion_Hora()>=700) && (this.comprobacion_Hora()<=930)){
                 System.out.println("Su auto no esta autorizado a circular en dia " 
@@ -155,7 +155,7 @@ public class Comprobar {
             }
             
         }else{
-            System.err.println("Su automovil puede circular sin ninguna restriccion el dia " + this.dia);
+            System.out.println("Su automovil puede circular el dia " + this.dia);
         }
     }
 }
